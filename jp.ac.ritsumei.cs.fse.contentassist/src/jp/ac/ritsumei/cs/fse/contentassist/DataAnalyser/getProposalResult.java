@@ -41,14 +41,12 @@ public class getProposalResult extends JavaAllCompletionProposalComputer{
 	List<ICompletionProposal> proposallist;
 	ContentAssistInvocationContext context;
 	IProgressMonitor monitor;
-	//List<CAProposal> caproposallist;
+
 	public getProposalResult(ContentAssistInvocationContext context, IProgressMonitor monitor){
 		// TODO Auto-generated constructor stub
 		this.context = context;
 		this.monitor = monitor;
-		this.proposallist = computeCompletionProposals(context, monitor);
-		//AbstractJavaCompletionProposal l = (AbstractJavaCompletionProposal)proposallist.get(1);
-		
+		this.proposallist = computeCompletionProposals(context, monitor);		
 	}
 
 	public List<ICompletionProposal> getAllProposalResult(){

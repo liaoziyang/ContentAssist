@@ -1,8 +1,5 @@
 package jp.ac.ritsumei.cs.fse.contentassist.DataAnalyser;
 
-
-//import org.jtool.changerecorder.editor.HistoryManager;
-
 public class HistoryRecorder {
 	
 	public String getInsertString(){

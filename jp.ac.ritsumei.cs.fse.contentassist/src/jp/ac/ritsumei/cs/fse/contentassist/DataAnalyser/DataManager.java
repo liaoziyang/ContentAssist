@@ -15,25 +15,19 @@ import org.eclipse.jface.text.contentassist.IContextInformation;
  */
 public class DataManager {
 	public ConveyDatatoView conveydatatoview = new ConveyDatatoView();
-	
 	public getProposalResult getproposalresult;
-
-	
 	public HistoryRecorder historyrecorder = new HistoryRecorder();
-	
-	
 	ContentAssistInvocationContext context = null;
 	IProgressMonitor monitor = null;
 	
 	public DataManager(){}
+
 	public DataManager(ContentAssistInvocationContext context, IProgressMonitor monitor){
 		this.context = context;
 		this.monitor = monitor;
 		getproposalresult = new getProposalResult(context,monitor);
 	}
-	public void start(){
-		//historyrecorder.getHistoryfromChangerecoder();
-	}
+
 	/**
 	 * @return The default result of java content assist
 	 */
@@ -43,10 +37,5 @@ public class DataManager {
 	
 	public List<IContextInformation> ContextInformation(){	
 		return getproposalresult.getAllProposalResultInformation();
-	}
-
-	public List<String> MethodName(){
-		return null;
-		//return divideproposal.getMethodName(context, monitor);
 	}
 }

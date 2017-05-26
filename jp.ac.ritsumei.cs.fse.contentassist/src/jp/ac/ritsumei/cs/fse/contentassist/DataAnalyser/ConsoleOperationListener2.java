@@ -18,25 +18,19 @@ import org.jtool.changerecorder.operation.TextOperation;
  * @author liaoziyang
  */
 public class ConsoleOperationListener2 implements OperationEventListener {
-    
+
     /**
      * Receives an operation event when operation history was updated.
      * @param evt the received event
      */
-	HistoryRecorder hr = new HistoryRecorder();
-		public static TextOperation ope;
-		public void historyNotification(OperationEvent evt) {
-      		ConsoleOperationListener2.ope = (TextOperation)evt.getOperation();
-//			System.out.println("start:"+ope.getStart());
-//			System.out.println("SequenceNumber:"+ope.getSequenceNumber());
-//			System.out.println("Time:"+ope.getTime());
-      		for (ApplyOperation ao : Activator.applyoperationlist) {
-				ao.update(ope.getStart(), ope.getDeletedText(), ope.getInsertedText());
-				System.out.println(ao.toString());
-			}
-
-      		
-	    }
-		
+    HistoryRecorder hr = new HistoryRecorder();
+    public static TextOperation ope;
+    public void historyNotification(OperationEvent evt) {
+    	ConsoleOperationListener2.ope = (TextOperation)evt.getOperation();
+    	for (ApplyOperation ao : Activator.applyoperationlist) {
+    		ao.update(ope.getStart(), ope.getDeletedText(), ope.getInsertedText());
+    		System.out.println(ao.toString());
+    	}	
     }
+  }
 
