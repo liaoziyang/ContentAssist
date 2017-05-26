@@ -40,41 +40,22 @@ public class JavaCompletionProposalComputer1 implements
 	    List<ICompletionProposal> propList = new ArrayList<ICompletionProposal>();
 	    List<ICompletionProposal> newpropList = new ArrayList<ICompletionProposal>();
 	    List<IContextInformation> propList2 = new ArrayList<IContextInformation>();
+
 	    ICompletionProposal first;
 	    DataManager datamanger = new DataManager(context,monitor);
 	    Activator.applyoperationlist.add(new ApplyOperation(ConsoleOperationListener2.ope.getStart(), ConsoleOperationListener2.ope.getAuthor(), ConsoleOperationListener2.ope.getFilePath(), propList));
-	   // Activator.applyoperationlist.add(new ApplyOperation(ConsoleOperationListener2.ope.getStart(),ConsoleOperationListener2.ope.getAuthor(),ConsoleOperationListener2.ope.getFilePath(),datamanger.getCAproposal()));
 	    List<String> list = new ArrayList();
-		//datamanger.getCAproposal();
-		datamanger.start();
+		  datamanger.start();
 	    CompletionProposal proposal;
 	    propList = datamanger.JavaDefaultProposal();
 	    propList2 = datamanger.ContextInformation();
 	    ApplyOperation ao = new ApplyOperation(ConsoleOperationListener2.ope.getStart(), ConsoleOperationListener2.ope.getAuthor(), ConsoleOperationListener2.ope.getFilePath(), propList);
-	    
 	    System.out.println(ao.toString());
-	    //AbstractJavaCompletionProposal l = (AbstractJavaCompletionProposal)propList.get(1);
-//	    for(int i=0;i<propList.size();i++){
-//	    	newpropList.add((AbstractJavaCompletionProposal)propList.get(i));
-//	    	StyledString text = ((AbstractJavaCompletionProposal) newpropList.get(i)).getStyledDisplayString();
-//			text.append(" -"+(200-i)+"%",this.LIAOZIYANG);
-//			((AbstractJavaCompletionProposal) newpropList.get(i)).setStyledDisplayString(text);
-//			((AbstractJavaCompletionProposal) newpropList.get(i)).setRelevance(200-i);;
-//			System.out.println(propList.get(i).toString());
-//			//String[] sourceStrArray = propList.get(i).toString().split("(");
-//	    	//System.out.println(sourceStrArray[0]);
-//	    	//System.out.println(propList.get(i).toString());
-//	    	//((AbstractJavaCompletionProposal) newpropList.get(i)).setStyledDisplayString(text)
-//	    	
-//	    }
-	 
-	    
 	    return newpropList;
 	}
 
 	public List computeContextInformation(ContentAssistInvocationContext context, IProgressMonitor monitor) {
 		// TODO Auto-generated method stub
-
 		return null;
 	}
 
@@ -85,7 +66,6 @@ public class JavaCompletionProposalComputer1 implements
 
 	public void sessionEnded() {
 		// TODO Auto-generated method stub
-		
 	}
 
 }
