@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.startup">
+      <startup
+            class="org.jtool.changerecorder.Activator">
+      </startup>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="org.jtool.changerecorder.editor.JCompilationUnitEditor"
+            default="true"
+            extensions="java"
+            icon="icons/jcu_obj.gif"
+            id="changerecorder.editor"
+            name="Java Editor with ChangeRecorder">
+      </editor>
+   </extension>
+</plugin>
