@@ -56,12 +56,11 @@ public class ApplyOperation {
 			last_offset = last_offset + delete_string.length() - insert_string.length();
 		}
 		else if(last_offset > operation_offset&&operation_offset > offset){
-			last_offset = last_offset + insert_string.length() - delete_string.length();
-			for(int i=0;i<=operation_offset - offset;i++){
-			InputString.remove(i);
+				last_offset = last_offset + insert_string.length() - delete_string.length();
+				for(int i=0;i<=operation_offset - offset;i++){
+				InputString.remove(i);
 			}
-			InputString.add(operation_offset-offset, insert_string.charAt(0));
-			
+				InputString.add(operation_offset-offset, insert_string.charAt(0));
 		}
 		
 	}
