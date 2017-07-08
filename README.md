@@ -18,3 +18,6 @@ Eclipse 4.6 (Neon) or late
 
 ## Compare to other content assist plugin
 ![alt text](compare.png)
+
+## Publication
+Liao Ziyang， 丸山勝久， ["編集履歴から算出した開発者の関心度に基づくコード補完"](編集履歴から算出した開発者の関心度に基づくコード補完.pdf)， 日本ソフトウェア科学会第33回大会，FOSE2-3, 2016
