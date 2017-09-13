@@ -6,7 +6,6 @@ import java.util.Map;
 
 import jp.ac.ritsumei.cs.fse.contentassist.Activator;
 import jp.ac.ritsumei.cs.fse.contentassist.DataAnalyser.ConsoleOperationListener2;
-import jp.ac.ritsumei.cs.fse.contentassist.DataAnalyser.ConveyDatatoView;
 import jp.ac.ritsumei.cs.fse.contentassist.DataAnalyser.DataManager;
 import jp.ac.ritsumei.cs.fse.contentassist.DataAnalyser.getProposalResult;
 import jp.ac.ritsumei.cs.fse.contentassist.entity.ApplyOperation;
@@ -45,7 +44,6 @@ public class JavaCompletionProposalComputer1 implements
 	    DataManager datamanger = new DataManager(context,monitor);
 	    Activator.applyoperationlist.add(new ApplyOperation(ConsoleOperationListener2.ope.getStart(), ConsoleOperationListener2.ope.getAuthor(), ConsoleOperationListener2.ope.getFilePath(), propList));
 	    List<String> list = new ArrayList();
-		  datamanger.start();
 	    CompletionProposal proposal;
 	    propList = datamanger.JavaDefaultProposal();
 	    propList2 = datamanger.ContextInformation();

@@ -26,7 +26,12 @@ public class ConsoleOperationListener2 implements OperationEventListener {
     HistoryRecorder hr = new HistoryRecorder();
     public static TextOperation ope;
     public void historyNotification(OperationEvent evt) {
-    	ConsoleOperationListener2.ope = (TextOperation)evt.getOperation();
+    	try {
+        	ConsoleOperationListener2.ope = (TextOperation) evt.getOperation();
+    	}
+    	catch(Exception e) {
+    		
+    	}
     	for (ApplyOperation ao : Activator.applyoperationlist) {
     		ao.update(ope.getStart(), ope.getDeletedText(), ope.getInsertedText());
     		System.out.println(ao.toString());

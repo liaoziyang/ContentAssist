@@ -14,7 +14,6 @@ import org.eclipse.jface.text.contentassist.IContextInformation;
  * Manage the Dataanalyser's work
  */
 public class DataManager {
-	public ConveyDatatoView conveydatatoview = new ConveyDatatoView();
 	public getProposalResult getproposalresult;
 	public HistoryRecorder historyrecorder = new HistoryRecorder();
 	ContentAssistInvocationContext context = null;
