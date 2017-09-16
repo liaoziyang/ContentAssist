@@ -6,7 +6,7 @@ In recent integrated development environments, by utilizing collective intellige
 ## Requirement
 JDK 1.7 or later
 
-Eclipse 4.6 (Neon) or late
+Eclipse 4.6 (Neon) or late (Eclipse for Eclipse committer)
 
 ## Installation
 
