@@ -20,7 +20,7 @@ public class ApplyOperation {
 		this.username = username;
 		this.path = path;
 		this.propList = propList;
-	    InputString.add('.');
+	        InputString.add('.');
 		
 	}
 	public int getOffset() {
